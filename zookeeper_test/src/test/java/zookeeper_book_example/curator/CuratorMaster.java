@@ -454,7 +454,7 @@ public class CuratorMaster implements Closeable, LeaderSelectorListener{
     
     public static void main (String[] args) {
         try{
-            CuratorMaster master = new CuratorMaster(args[0], args[1], 
+            CuratorMaster master = new CuratorMaster("1", "127.0.0.1:2181", 
                     new ExponentialBackoffRetry(1000, 5));
             master.startZK();
             master.bootstrap();

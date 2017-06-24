@@ -414,7 +414,7 @@ public class CuratorMasterLatch implements Closeable, LeaderLatchListener {
     
     public static void main (String[] args) {
         try{
-            CuratorMasterLatch master = new CuratorMasterLatch(args[0], args[1], 
+            CuratorMasterLatch master = new CuratorMasterLatch("1", "127.0.0.1:2181", 
                     new ExponentialBackoffRetry(1000, 5));
             master.startZK();
             master.bootstrap();
