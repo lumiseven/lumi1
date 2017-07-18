@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: customer-ribbon
+    
+server:
+  port: 9000
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumione:1111/eureka/,http://lumitwo:1112/eureka/
