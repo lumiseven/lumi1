@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: demo-service
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumione:1111/eureka/,http://lumitwo:1112/eureka/
