@@ -1,0 +1,15 @@
+spring: 
+  application: 
+    name: eureka-server
+
+server: 
+  port: 1112
+  
+eureka: 
+  instance: 
+    hostname: lumitwo
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      defaultZone: http://lumione:1111/eureka/
