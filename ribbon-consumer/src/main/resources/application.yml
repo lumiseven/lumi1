@@ -1,0 +1,13 @@
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=2000
+spring:
+  application:
+    name: ribbon-consumer
+    
+server:
+  port: 9000
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumione:1111/eureka/,http://lumitwo:1112/eureka/
+      
