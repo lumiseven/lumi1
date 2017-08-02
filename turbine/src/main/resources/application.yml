@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: turbine
+    
+server:
+  port: 8989
+management:
+  port: 8990
+  
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://192.168.8.102:1111/eureka/,http://192.168.8.102:1112/eureka/
+
+turbine:
+  app-config: CUSTOMER-RIBBON
+  cluster-name-expression: new String("default")
+  combine-host-port: true
