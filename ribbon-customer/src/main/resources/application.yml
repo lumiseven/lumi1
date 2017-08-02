@@ -6,6 +6,8 @@ server:
   port: 9000
     
 eureka:
+#  instance:
+#    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://lumione:1111/eureka/,http://lumitwo:1112/eureka/
