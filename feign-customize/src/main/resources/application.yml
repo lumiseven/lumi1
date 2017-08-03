@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: feign-customize
+    
+server:
+  port: 9001
+  
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://192.168.8.102:1111/eureka/,http://192.168.8.102:1112/eureka/
