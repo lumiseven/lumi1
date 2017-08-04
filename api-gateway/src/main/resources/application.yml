@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway
+    
+server:
+  port: 5555
+  
+zuul:
+  routes:
+    demo-service: 
+      path: /api-demo-service/**
+#      url: http://localhost:9001/
+      service-id: demo-service
+    feign-customize: 
+      path: /api-feign-customize/**
+      service-id: feign-customize
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://192.168.8.102:1111/eureka/,http://192.168.8.102:1112/eureka/
