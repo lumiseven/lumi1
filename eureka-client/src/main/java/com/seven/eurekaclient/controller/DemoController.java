@@ -24,7 +24,7 @@ public class DemoController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String index(){
 		ServiceInstance instance = discoveryClient.getLocalServiceInstance();
-		logger.info("/hello, host:" + instance.getHost() + ", service_id: " + instance.getServiceId());;
+		logger.info("/hello, host:" + instance.getHost() + ", service_id: " + instance.getServiceId());
 		return "demo eureka client";
 	}
 	
