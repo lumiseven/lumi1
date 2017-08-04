@@ -11,3 +11,27 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.8.102:1111/eureka/,http://192.168.8.102:1112/eureka/
+      
+ribbon:
+  ConnectionTimeout: 500
+  ReadTimeout: 5000
+  
+demo-service:
+  ribbon:
+    ConnectionTimeout: 500
+    ReadTimeout: 1000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 1
+    MaxAutoRetries: 1
+  
+feign:
+  hystrix:
+    enabled: true
+    
+logging:
+  level:
+    com: 
+      seven: 
+        feigncustomize: 
+          service: 
+            HelloService: DEBUG

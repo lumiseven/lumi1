@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+//import com.seven.feigncustomize.DisableHystrixConfiguration;
 import com.seven.feigncustomize.entity.User;
+import com.seven.feigncustomize.fallback.HelloServiceFallback;
 
-@FeignClient("demo-service")
+@FeignClient(name="demo-service", fallback=HelloServiceFallback.class)
+//@FeignClient(name="demo-service", configuration=DisableHystrixConfiguration.class)//configure not use hystrix
+//@FeignClient(name="demo-service", configuration=FeignLogConfiguration.class)//log level special setting
 public interface HelloService {
 	
 	@RequestMapping("/hello")
