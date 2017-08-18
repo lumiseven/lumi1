@@ -4,12 +4,3 @@ spring:
     port: 5672
     username: springcloud
     password: springcloud
-    
-eureka:
-  client:
-    service-url:
-      defaultZone: http://lumione:1117/eureka/
-      
-logging:
-  level:
-    org.springframework.web: DEBUG
