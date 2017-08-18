@@ -4,3 +4,7 @@ spring:
     port: 5672
     username: springcloud
     password: springcloud
+
+logging:
+  level:
+    org.springframework.web: DEBUG
