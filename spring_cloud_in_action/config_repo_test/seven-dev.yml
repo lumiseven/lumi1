@@ -1,1 +1,8 @@
 from: git-dev-2.0_
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: springcloud
