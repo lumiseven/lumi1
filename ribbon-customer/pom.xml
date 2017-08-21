@@ -54,6 +54,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
+		
+		<!-- hystrix amqp default use rabbitmq -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-netflix-hystrix-amqp</artifactId>
+		</dependency>
+		
 	</dependencies>
 
 	<dependencyManagement>
