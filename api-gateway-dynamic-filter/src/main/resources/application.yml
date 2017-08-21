@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: api-gateway-dynamic-filter
+    
+server:
+  port: 5556
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumione:1117/eureka/
+      
+zuul:
+  routes:
+    demo: 
+      path: /hello-service/**
+      service-id: demo-service
+  filter: 
+    root: filter
+    interval: 5
