@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lumiseven/lumi1
+          search-paths:
+          - spring_cloud_in_action/config_repo_test
+          username: lumiseven
+          password: lumiseven7
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: springcloud
+#    password: springcloud
+
+#  profiles:
+#    active:
+#    - native
+
+server:
+  port: 7001
+  
+#not work in Dalston SR2
+encrypt:
+  key: seven
+    
+logging:
+  level:
+    org.springframework.web: DEBUG
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumione:1117/eureka/
+      
+management:
+  security:
+    enabled: false
+  
+#security:
+#  user:
+#    name: seven
+#    password: seven
