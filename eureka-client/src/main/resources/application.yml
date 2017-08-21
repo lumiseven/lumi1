@@ -7,4 +7,5 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://lumione:1111/eureka/,http://lumitwo:1112/eureka/
+#      defaultZone: http://lumione:1111/eureka/,http://lumitwo:1112/eureka/
+      defaultZone: http://lumiseven:1117/eureka/
