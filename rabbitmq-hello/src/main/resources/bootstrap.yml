@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: rabbitmq-hello
+  cloud:
+    config:
+      label: config-label-test
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true #优先判断config server 获取是否正常，快速响应失败内容
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumiseven:1117/eureka/
+      
+logging:
+  level:
+    org.springframework.web: DEBUG
+      
