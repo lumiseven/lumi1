@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lumiseven:1117/eureka/
+      
+spring:
+  application:
+    name: api-gateway-dynamic-route
+  cloud:
+    config:
+      label: config-label-test
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-server
+    
+server:
+  port: 5555
+  
+management:
+  security:
+    enabled: false
