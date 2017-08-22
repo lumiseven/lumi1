@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: stream-producer
+  cloud:
+    stream:
+      bindings:
+#        input: 
+#          destination: output
+#          content-type: application/json
+#        output: 
+#          destination: input
+#          content-type: application/json
+        output:
+          destination: DemoTopic
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: springcloud
+    
+server:
+  port: 8002
+  
