@@ -7,7 +7,7 @@ server:
   
 eureka: 
   instance: 
-    hostname: lumiseven
+    hostname: localhost
   server: 
     enable-self-preservation: false
   client:
